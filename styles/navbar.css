@@ -1,0 +1,182 @@
+header {
+  display: flex;
+  padding: 0 15px 0 15px;
+  background-color: #ffffff;
+  border-bottom: solid 1px rgb(238, 241, 241);
+}
+
+#navbar {
+  font-family: "tbc-bold";
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+#tbc-concept-logo {
+  display: none;
+}
+
+#tbc-logo {
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+#desktop-navigation-container {
+  display: none;
+}
+#navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+}
+
+#search-icon {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#bundle-link-container {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+#bundle-link-arrow {
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+#bundle-link {
+  color: #182cc0;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+}
+#bundle-link:hover {
+  color: #007aff;
+}
+
+#navbar-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#menu-top-bar,
+#menu-middle-bar,
+#menu-bottom-bar {
+  height: 2px;
+  background-color: #555f62;
+  border-radius: 1px;
+}
+#menu-top-bar {
+  width: 11px;
+}
+#menu-middle-bar {
+  width: 20px;
+}
+#menu-bottom-bar {
+  width: 15px;
+}
+
+#language-container {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  header {
+    padding: 0 45px 0 45px;
+  }
+
+  #navigation-container {
+    column-gap: 16px;
+  }
+  #bundle-link-arrow {
+    margin: 0;
+  }
+  #bundle-link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  #tbc-logo {
+    display: none;
+  }
+
+  #tbc-concept-logo {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 0 47px 0 47px;
+    justify-content: center;
+  }
+
+  #navbar {
+    max-width: 1110px;
+  }
+
+  #navbar-menu-container {
+    display: none;
+  }
+
+  #desktop-navigation-container {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+  }
+
+  .desktop-navigation-options {
+    font-family: "tbc-regular";
+    font-size: 14px;
+    color: #222;
+    cursor: pointer;
+  }
+
+  #language-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center;
+    column-gap: 4px;
+    height: 36px;
+    padding: 0 8px 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+  }
+  #language-container:hover {
+    background-color: #eef1f1;
+  }
+
+  #language-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  #language-option {
+    font-size: 14px;
+    color: #555f62;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desktop-navigation-options,
+  #language-option {
+    font-size: 16px;
+  }
+}
