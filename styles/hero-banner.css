@@ -1,0 +1,122 @@
+#hero-container {
+  position: relative;
+  z-index: 1;
+}
+#hero-banner {
+  background-image: url(https://static.tbcconcept.ge/mobile/media/ze324k50.yq4Become-2.webp);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(70%);
+  height: 370px;
+  width: 100%;
+  margin: 32px 0 32px 0;
+}
+
+#hero-banner-inner-container {
+  position: absolute;
+  padding: 0 15px 20px 15px;
+  bottom: 0;
+}
+
+#hero-banner-h1 {
+  font-family: "tbc-bold";
+  margin: 0;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#hero-banner-description {
+  font-family: "tbc-regular";
+  font-size: 14px;
+  color: #ffffff;
+  margin: 15px 0 26px 0;
+  line-height: 24px;
+}
+
+#hero-banner-button {
+  display: block;
+  cursor: pointer;
+}
+
+#hero-banner-button-content {
+  background-image: linear-gradient(15deg, #001682, #3240e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 6px;
+  border-radius: 4px;
+  font-family: "tbc-bold";
+  font-size: 12px;
+  color: #ffffff;
+  width: 100%;
+  padding: 16px 0 16px 0;
+}
+
+@media (min-width: 480px) {
+  #hero-banner {
+    height: 450px;
+  }
+
+  #hero-banner-inner-container {
+    padding: 0 45px 36px 45px;
+  }
+
+  #hero-banner-h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 748px) {
+  #hero-banner {
+    height: 425px;
+  }
+}
+
+@media (min-width: 768px) {
+  #hero-container {
+    padding: 0 45px 0 45px;
+  }
+
+  #hero-banner {
+    height: 450px;
+    border-radius: 6px;
+  }
+
+  #hero-banner-description {
+    width: 450px;
+  }
+
+  #hero-banner-button {
+    width: 151px;
+  }
+}
+
+@media (min-width: 992px) {
+  #hero {
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero-container {
+    width: 1110px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero-banner {
+    height: 360px;
+    max-width: 1110px;
+    margin-bottom: 60px;
+  }
+
+  #hero-banner-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 80px 80px 80px;
+    height: 200px;
+    bottom: 32px;
+    left: 45px;
+  }
+}
