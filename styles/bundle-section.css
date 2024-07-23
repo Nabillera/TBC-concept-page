@@ -1,0 +1,177 @@
+h2 {
+  font-family: "tbc-bold";
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #141719;
+}
+
+#bundle-section-inner-container {
+  box-sizing: border-box;
+  padding: 36px 15px 36px 15px;
+  height: 345px;
+  width: 100%;
+  position: relative;
+}
+
+#bundle-items-container {
+  box-sizing: border-box;
+  height: 232px;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  display: grid;
+  overflow-x: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+}
+
+.bundle-items {
+  box-sizing: border-box;
+  width: 280px;
+  height: 232px;
+  padding: 24px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  filter: brightness(70%);
+}
+
+#bundle-item-wrapper-1,
+#bundle-item-wrapper-2,
+#bundle-item-wrapper-3 {
+  position: relative;
+}
+
+.bundle-item-content-container {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+#bundle-item-1 {
+  background-image: url(https://static.tbcconcept.ge/mobile/media/mfvvitla.0j5430128849_7213815365374065_9017687812435872577_n.png);
+}
+#bundle-item-2 {
+  background-image: url(https://static.tbcconcept.ge/mobile/media/nqeaa1rb.avl360.png);
+}
+#bundle-item-3 {
+  background-image: url(https://static.tbcconcept.ge/mobile/media/0m25n3qt.w03prem.png);
+}
+
+.bundle-item-link {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+.bundle-name {
+  font-family: "tbc-bold";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.see-more-link {
+  margin-top: 2px;
+  font-family: "tbc-bold";
+  font-size: 12px;
+  color: #ffffff;
+}
+
+@media (min-width: 480px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  #bundle-section-inner-container {
+    height: 376px;
+    padding: 40px 45px 40px 45px;
+  }
+
+  #bundle-items-container {
+    padding: 0 45px 0 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  #bundle-section-inner-container {
+    height: 646px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #bundle-items-container {
+    height: 494px;
+    bottom: 36px;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "item1 item2"
+      "item3 item2";
+  }
+
+  .bundle-items {
+    min-width: 324px;
+    width: 100%;
+  }
+
+  #bundle-item-2 {
+    height: 494px;
+  }
+
+  #bundle-item-wrapper-1 {
+    grid-area: item1;
+  }
+
+  #bundle-item-wrapper-2 {
+    grid-area: item2;
+  }
+
+  #bundle-item-wrapper-3 {
+    grid-area: item3;
+  }
+
+  .bundle-name {
+    font-size: 24px;
+  }
+
+  .see-more-link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  #bundle-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  #bundle-section-inner-container {
+    height: 734px;
+    max-width: 1200px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #bundle-items-container {
+    height: 542px;
+    bottom: 60px;
+  }
+
+  .bundle-items {
+    height: 256px;
+  }
+
+  #bundle-item-2 {
+    height: 542px;
+  }
+
+  .bundle-item-content-container {
+    bottom: 40px;
+    left: 40px;
+  }
+}
