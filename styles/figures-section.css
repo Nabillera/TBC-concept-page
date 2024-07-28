@@ -56,11 +56,11 @@
     max-width: 1110px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    column-gap: 30px;
   }
 
   .figures-item {
-    min-width: 184px;
+    min-width: 180px;
     max-width: 254px;
     width: 100%;
   }
