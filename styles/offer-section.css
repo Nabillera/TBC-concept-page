@@ -1,0 +1,197 @@
+#offer-section-heading-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: "tbc-bold";
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#offers-heading {
+  font-size: 14px;
+  margin: 0;
+  color: #141719;
+}
+
+#offers-link-container {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  font-size: 12px;
+  color: #182cc0;
+}
+
+#offer-slider {
+  box-sizing: border-box;
+  padding: 0 15px 0 15px;
+  width: 100%;
+  height: 352px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow-x: scroll;
+  column-gap: 16px;
+  cursor: grab;
+}
+#offer-slider:active {
+  cursor: grabbing;
+}
+
+.slide-item {
+  box-sizing: border-box;
+  width: 267px;
+  height: 80%;
+  border: solid 1px #e1e4e5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.slide-item:hover {
+  box-shadow: 0 36px 40px -15px rgba(12, 43, 67, 0.07);
+  background-color: #ffffff;
+}
+
+.slide-banner-container {
+  width: 100%;
+  min-width: 240px;
+  height: 155px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: background-position 0.25s ease-in-out;
+}
+
+#slide-banner-1 {
+  background-image: url(https://static.tbcconcept.ge/mobile/media/nng1tsvv.1bs350.jpg);
+}
+#slide-banner-2 {
+  background-image: url(https://static.tbcconcept.ge/desktop/media/onflg4xp.isqDSC_2268%202.png);
+}
+#slide-banner-3 {
+  background-image: url(https://static.tbcconcept.ge/mobile/media/exhqxj55.burtegeta-02.png);
+}
+#slide-banner-4 {
+  background-image: url(https://static.tbcconcept.ge/desktop/media/fukakrz1.jvfle%20meridien%202.png);
+}
+#slide-banner-5 {
+  background-image: url(https://static.tbcconcept.ge/desktop/media/izjj4s1w.f13colloseum%202.png);
+}
+
+.company-logo {
+  background-color: #ffffff;
+  object-fit: contain;
+  width: 78px;
+  height: 56px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+.slide-content-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 12px;
+  padding: 20px;
+  font-family: "tbc-bold";
+}
+
+.slide-title {
+  font-size: 14px;
+  color: #141719;
+  margin: 0;
+}
+
+.slide-category-container {
+  display: flex;
+  column-gap: 8px;
+}
+
+.slide-category {
+  font-size: 12px;
+  color: #6f787b;
+  margin-top: 0;
+  width: fit-content;
+}
+
+@media (min-width: 480px) {
+  #offers-link-container {
+    font-size: 14px;
+  }
+  #offer-section-heading-container {
+    margin-bottom: 28px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  #offers-heading {
+    font-size: 24px;
+  }
+  #offer-slider {
+    padding: 0 45px 0 45px;
+  }
+  .slide-item {
+    width: calc(100vw * 2 / 3);
+  }
+}
+
+@media (min-width: 600px) {
+  .slide-banner-container {
+    height: 105px;
+  }
+  .slide-item {
+    width: calc(100vw * 2 / 5);
+  }
+}
+
+@media (min-width: 768px) {
+  #offer-slider {
+    height: 376px;
+  }
+  .slide-title {
+    font-size: 16px;
+  }
+  .slide-banner-container {
+    height: 201px;
+  }
+  .slide-item {
+    width: calc((100vw * 3 / 7));
+    height: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  #offer-section {
+    display: flex;
+    justify-content: center;
+  }
+  #offer-section-inner-container {
+    width: 100%;
+    max-width: 1204px;
+  }
+  #offer-section-heading-container {
+    max-width: 1200px;
+  }
+  #offer-slider {
+    overflow-x: hidden;
+    height: 430px;
+    padding-bottom: 28px;
+  }
+  .slide-banner-container {
+    height: 268px;
+  }
+  .slide-banner-container:hover {
+    background-position: center -7px;
+  }
+  .slide-item {
+    width: calc(100vw * 4 / 9);
+    max-width: 410px;
+    height: 100%;
+  }
+}
