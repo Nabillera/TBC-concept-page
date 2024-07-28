@@ -26,32 +26,32 @@ export class FooterSection extends HTMLElement {
         <div id="dropdown-list-container">
           <div class="dropdown-item" isOpen="false">
             <div class="dropdown-header">
-              <a class="dropdown-title">პროდუქტები</a>
+              <a class="dropdown-title" href="https://tbcconcept.ge/ge/products/overview">პროდუქტები</a>
               <img class="dropdown-arrow" src="../images/down-arrow-black.svg"/>
             </div>
             <div class="dropdown-container">
-              <a>ნაკრები</a>
-              <a>პერსონალური ნაკრები</a>
+              <a class="dropdown-links" href="https://tbcconcept.ge/ge/products/kits">ნაკრები</a>
+              <a class="dropdown-links" href="https://tbcconcept.ge/ge/products/personalbanker">პერსონალური ნაკრები</a>
             </div>
           </div>
           <div class="dropdown-item" isOpen="false">
             <div class="dropdown-header">
-              <a class="dropdown-title">Lifestyle</a>
+              <a class="dropdown-title" href="https://tbcconcept.ge/ge/lifestyle/overview">Lifestyle</a>
               <img class="dropdown-arrow" src="../images/down-arrow-black.svg"/>
             </div>
             <div class="dropdown-container">
-              <a>შეთავაზებები</a>
-              <a>ღონისძიებები</a>
+              <a class="dropdown-links" href="https://tbcconcept.ge/ge/lifestyle/offers">შეთავაზებები</a>
+              <a class="dropdown-links" href="https://tbcconcept.ge/ge/lifestyle/events">ღონისძიებები</a>
             </div>
           </div>
           <div class="dropdown-item" isOpen="false">
             <div class="dropdown-header">
-              <a class="dropdown-title">კონცეპტის სივრცე</a>
+              <a class="dropdown-title" href="https://tbcconcept.ge/ge/concept-space/overview">კონცეპტის სივრცე</a>
               <img class="dropdown-arrow" src="../images/down-arrow-black.svg"/>
             </div>
             <div class="dropdown-container">
-              <a>ბიბლიოთეკა</a>
-              <a>კაფე</a>
+              <a class="dropdown-links" href="https://tbcconcept.ge/ge/concept-space/library">ბიბლიოთეკა</a>
+              <a class="dropdown-links" href="https://tbcconcept.ge/ge/concept-space/cafe">კაფე</a>
             </div>
           </div>
         </div>
@@ -62,15 +62,15 @@ export class FooterSection extends HTMLElement {
             <div id="contact-information-inner-container">
               <div class="contact-option-container">
                 <img src="../images/telephone-icon.svg"/>
-                <a>+995 32 2 27 27 00</a>
+                <a class="contact-info-anchor">+995 32 2 27 27 00</a>
               </div>
               <div class="contact-option-container">
                 <img src="../images/message-icon.svg"/>
-                <a>info@tbcconcept.ge</a>
+                <a class="contact-info-anchor">info@tbcconcept.ge</a>
               </div>
               <div class="contact-option-container">
                 <img src="../images/location-icon.svg"/>
-                <a>ფილიალები</a>
+                <a class="contact-info-anchor">ფილიალები</a>
               </div>
             </div>
           </div>
@@ -78,11 +78,11 @@ export class FooterSection extends HTMLElement {
           <div id="social-media-container">
             <p id="social-media-heading">სოციალური ქსელები</p>
             <div id="social-links-container">
-              <a >
-                <div class="social-link"><img src="../images/facebook-icon.svg"/></div>
+              <a href="https://www.facebook.com/tbcconcept">
+                <div class="social-link"><img class="social-link-icon" src="../images/facebook-icon.svg"/></div>
               </a>
-              <a >
-                <div class="social-link"><img src="../images/instagram-icon.svg"/></div>
+              <a href="https://www.instagram.com/tbc_concept/">
+                <div class="social-link"><img class="social-link-icon" src="../images/instagram-icon.svg"/></div>
               </a>
             </div>
           </div>
@@ -92,8 +92,8 @@ export class FooterSection extends HTMLElement {
       <div id="footer-bottom-section">
 
         <div id="footer-bottom-links-container">
-          <span >კონფიდენციალურობა</span>
-          <span>წესები და პირობები</span>
+          <span class="footer-bottom-links-item">კონფიდენციალურობა</span>
+          <span class="footer-bottom-links-item">წესები და პირობები</span>
         </div>
         <div id="footer-bottom-logo-container">
           <img id="footer-bottom-logo" src="../images/tbc-logo-gray.svg"/>  
@@ -105,29 +105,6 @@ export class FooterSection extends HTMLElement {
 
     footerSection.appendChild(footerSectionTemplate.content.cloneNode(true));
 
-    this.dropdowns = this.shadowRoot.querySelectorAll(".dropdown-item");
-    this.headers = this.shadowRoot.querySelectorAll(".dropdown-header");
-    this.contents = this.shadowRoot.querySelectorAll(".dropdown-container");
-
-    this.headers.forEach((header) => {
-      header.addEventListener("click", (event) => this.toggleDropdown(event));
-    });
-
-    // this.headers.forEach((header) => {
-    //   header.addEventListener("click", (event) => {
-    //     const clickedHeader = event.currentTarget;
-    //     const clickedContent = clickedHeader.nextSibling;
-    //     console.log(clickedHeader);
-    //     console.log(clickedContent);
-
-    //     this.contents.forEach((content) => {
-    //       if (content !== clickedContent) {
-    //         content.setAttribute("isOpen", false);
-    //       }
-    //     });
-    //   });
-    // });
-
     const styleSheet = document.createElement("link");
     styleSheet.setAttribute("rel", "stylesheet");
     styleSheet.setAttribute("type", "text/css");
@@ -135,28 +112,6 @@ export class FooterSection extends HTMLElement {
 
     this.shadowRoot.appendChild(styleSheet);
     this.shadowRoot.appendChild(footerSection);
-  }
-
-  toggleDropdown(event) {
-    const clickedHeader = event.currentTarget;
-    const clickedContent = clickedHeader.nextElementSibling;
-    console.log(clickedContent);
-
-    this.contents.forEach((content) => {
-      if (content !== clickedContent) {
-        content.classList.remove("open");
-      }
-    });
-
-    clickedContent.classList.toggle("open");
-  }
-
-  connectedCallback() {
-    this.toggle();
-  }
-
-  toggle() {
-    console.log("toggle");
   }
 }
 customElements.define("footer-section", FooterSection);
