@@ -38,6 +38,7 @@ h2 {
   border-radius: 8px;
   overflow: hidden;
   filter: brightness(70%);
+  cursor: pointer;
 }
 
 #bundle-item-wrapper-1,
@@ -162,8 +163,19 @@ h2 {
     bottom: 60px;
   }
 
+  #bundle-item-wrapper-1,
+  #bundle-item-wrapper-2,
+  #bundle-item-wrapper-3 {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
   .bundle-items {
     height: 256px;
+    transition: transform 0.25s ease-in-out;
+  }
+  .bundle-items:hover {
+    transform: scale(1.02);
   }
 
   #bundle-item-2 {

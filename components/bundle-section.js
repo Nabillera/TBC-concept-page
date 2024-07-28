@@ -48,7 +48,6 @@ export class BundleSection extends HTMLElement {
               </div>
           </div>
 
-          
         </div>
       </div>
     </div>
