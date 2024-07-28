@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 #app-download {
   margin: 36px 0 36px 0;
   background-color: #ffffff;
@@ -47,6 +51,9 @@
   background-color: rgb(249, 250, 250);
   color: rgb(24, 44, 192);
   padding: 16px 32px 16px 32px;
+}
+#app-download-button-content:hover {
+  border-color: #e1e4e5;
 }
 
 @media (min-width: 480px) {
